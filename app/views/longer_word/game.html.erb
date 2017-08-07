@@ -1,0 +1,13 @@
+<h1>LongerWord#game</h1>
+<p>Find me in app/views/longer_word/game.html.erb</p>
+<%= @grid %>
+<% start_time = Time.now %>
+<form action="/score">
+  <label for="question">Le MOT JUSTE</label>
+  <input type="text" id="question" name="finding" placeholder="what time is it?">
+  <input type="hidden" name="steakhache" value="<%= start_time %>">
+   <input type="hidden" name="steakhachebbq" value="<%= @grid %>">
+  <input type="submit" value="Go on!">
+
+
+</form>
